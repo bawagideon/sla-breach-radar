@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Operations SLA Breach Radar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root { --bg: #090d16; --card: #131b2e; --accent: #ef4444; --accent-glow: rgba(239, 68, 68, 0.25); --warning: #f59e0b; --success: #10b981; --text: #f1f5f9; --text-dim: #94a3b8; --border: #1e293b; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; }
+    body { background: var(--bg); color: var(--text); padding: 24px; min-height: 100vh; }
+    .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 16px; margin-bottom: 24px; }
+    .title { font-size: 20px; font-weight: 700; color: #fff; }
+    .badge { background: var(--accent-glow); color: var(--accent); padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; border: 1px solid var(--accent); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 20px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 18px; }
+    .card-label { font-size: 12px; color: var(--text-dim); text-transform: uppercase; margin-bottom: 6px; }
+    .card-val { font-size: 24px; font-weight: 700; color: #fff; }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+    th { color: var(--text-dim); font-size: 11px; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="title">⏱️ Operations SLA Breach Radar</div>
+    <span class="badge">Real-Time Queue Telemetry</span>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="card-label">Active Orders / Tickets</div>
+      <div class="card-val">42 Active</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Breach Imminent (<60m)</div>
+      <div class="card-val" style="color: #f59e0b;">3 Critical</div>
+    </div>
+    <div class="card">
+      <div class="card-label">SLA Compliance Rate</div>
+      <div class="card-val" style="color: var(--success);">97.4%</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 style="font-size: 14px; margin-bottom: 10px;">Queue Velocity & Urgency Countdown</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Order / Ticket</th>
+          <th>Account Tier</th>
+          <th>Deadline Window</th>
+          <th>Countdown</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>#ORD-9024: Custom Server Deployment</strong></td>
+          <td>Enterprise Platinum</td>
+          <td>Within 2 hours</td>
+          <td style="color: #ef4444; font-weight: 700;">14m 20s</td>
+          <td style="color: #ef4444;">ESCALATED TO LEAD</td>
+        </tr>
+        <tr>
+          <td><strong>#TK-5512: Database Replication Failure</strong></td>
+          <td>Growth Tier</td>
+          <td>Within 4 hours</td>
+          <td style="color: #f59e0b; font-weight: 700;">48m 10s</td>
+          <td style="color: #f59e0b;">ATTENTION REQUIRED</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

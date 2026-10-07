@@ -1,0 +1,17 @@
+{
+  "name": "sla-breach-radar",
+  "version": "1.0.0",
+  "description": "Real-time priority countdown HUD that monitors customer fulfillment orders and support tickets, triggering proactive escalations before SLA breach penalties hit.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test test/sla-breach-radar.test.js"
+  },
+  "keywords": [
+    "sla-radar",
+    "operations-ops",
+    "priority-queue",
+    "real-time-hud"
+  ],
+  "author": "Gideon Bawa <bawagideon@gmail.com>",
+  "license": "MIT"
+}
